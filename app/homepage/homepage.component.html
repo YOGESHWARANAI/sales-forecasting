@@ -1,0 +1,140 @@
+<div class="home_page">
+    <style>
+        :host {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-size: 14px;
+          color: #333;
+          box-sizing: border-box;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 8px 0;
+        }
+      input{
+        border: 0px;
+        border-bottom: 2px solid black;
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        background-color: transparent;
+      }
+        p {
+          margin: 0;
+        }
+      
+        .spacer {
+          flex: 1;
+        }
+      
+        .toolbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          background-color:#1976d2;
+          color: black;
+          font-weight: 600;
+          z-index: 3;
+        }
+      button{
+        width: 250px;
+        height: 30px;
+        border-radius: 10px;
+      }
+        .toolbar img {
+          margin: 0 16px;
+        }
+      
+        .toolbar #twitter-logo {
+          height: 40px;
+          margin: 0 8px;
+        }
+      
+        .toolbar #youtube-logo {
+          height: 40px;
+          margin: 0 16px;
+        }
+      
+        .toolbar #twitter-logo:hover,
+        .toolbar #youtube-logo:hover {
+          opacity: 0.8;
+        }
+      
+        .content {
+          display: flex;
+          margin: 82px auto 32px;
+          padding: 0 16px;
+          max-width: 960px;
+          flex-direction: row;
+          align-items: center;
+        }
+      
+        svg.material-icons {
+          height: 24px;
+          width: auto;
+        }
+      
+        svg.material-icons:not(:last-child) {
+          margin-right: 8px;
+        }
+      
+        .card svg.material-icons path {
+          fill: #888;
+        }
+      
+        @media screen and (max-width: 767px) {
+          .card-container > *:not(.circle-link) ,
+          .terminal {
+            width: 100%;
+          }
+      
+          .card:not(.highlight-card) {
+            height: 16px;
+            margin: 8px 0;
+          }
+      
+          .card.highlight-card span {
+            margin-left: 72px;
+          }
+      
+          svg#rocket-smoke {
+            right: 120px;
+            transform: rotate(-5deg);
+          }
+        }
+      
+        @media screen and (max-width: 575px) {
+          svg#rocket-smoke {
+            display: none;
+            visibility: hidden;
+          }
+        }
+      </style>
+      
+  
+      <div class="content" role="main" >
+        <div style="display: flex; flex-direction: row;justify-content: center;align-items: center;">
+    <div class="container">
+        <h1 contenteditable>SALES FORECASTING</h1>
+        <p>Sales forecasting using AI, ML and Angular JS</p>
+        <!-- <p>We use Flask for this as a API</p> -->
+        <br>
+        <button style="cursor: pointer;font-size: 17px; width: 308px;height: 44px; background-color: black;color: white;" (click)="goToPage('Login')">Get Started</button>
+          </div>
+    <div class="floating" style="width: 600px; height: 470px; background-image: url('https://res.cloudinary.com/dxhmtgtpg/image/upload/v1680634525/21118603_6425301-removebg-preview_4_vmy974.png');background-size: contain; margin-left: 10%;background-repeat: no-repeat;margin-top: 6%;">
+       
+    </div>
+</div>
+      </div>
+    
+</div>

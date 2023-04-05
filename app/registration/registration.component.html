@@ -1,0 +1,182 @@
+<style>
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+  input{
+    border-radius: 7px;
+    border: 1px solid black;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    background-color: gainsboro;
+    padding-left: 15px;
+  }
+ 
+    p {
+      margin: 0;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      font-weight: 600;
+    }
+  button{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+  }
+    .toolbar img {
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 8px;
+    }
+  
+    .toolbar #youtube-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+      opacity: 0.8;
+    }
+  
+    .content {
+      display: flex;
+      max-width: 960px;
+      flex-direction: row;
+      align-items: center;
+      height:100vh;
+      margin: 0;
+      justify-content: center;
+      margin-left:7% ;
+    }
+  label{
+    margin-bottom: 5px;
+  }
+    svg.material-icons {
+      height: 24px;
+      width: auto;
+    }
+  
+    svg.material-icons:not(:last-child) {
+      margin-right: 8px;
+    }
+  
+    .card svg.material-icons path {
+      fill: #888;
+    }
+  
+    @media screen and (max-width: 767px) {
+      .card-container > *:not(.circle-link) ,
+      .terminal {
+        width: 100%;
+      }
+  
+      .card:not(.highlight-card) {
+        height: 16px;
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
+      svg#rocket-smoke {
+        right: 120px;
+        transform: rotate(-5deg);
+      }
+    }
+  
+    @media screen and (max-width: 575px) {
+      svg#rocket-smoke {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  </style>
+  
+  <!-- Toolbar -->
+  <div class="">
+  <div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+      />
+      <span>Welcome</span>
+      <span>         </span>
+      <span (click)="goToPage('Login')" style="margin-left: 20px; cursor: pointer;">sign in</span>
+      <span>         </span>
+      <div class="spacer"></div>
+  </div>
+
+    <div class="content" role="main" >
+        <div style="width: 500px;height: 500px;margin-top: 6%">
+            <img width="500px" height="500px" src="https://img.freepik.com/free-vector/key-concept-illustration_114360-6305.jpg?w=826&t=st=1680640464~exp=1680641064~hmac=587aa3b33f8c5a070e74cfc595d7db669037df53065acd4e14a6808b1dddbaa0"/>
+            </div>
+    <div style="background-color: whitesmoke;width: 500px;height: 500px;margin-top: 6%;">
+    
+        <div style="justify-content: center;margin-top: 8%; align-items: center;text-align: center;">
+        <h1>Sign Up</h1>
+        <div style="text-align: initial;margin-left: 13%;">
+            <label>User Name</label>
+            <br><br>
+            <input type="text" placeholder="Name *"/>
+            </div>
+       <br>
+        <div style="text-align: initial;margin-left: 13%;">
+        <label>E-mail</label>
+        <br><br>
+        <input #emails type="text" placeholder="Email *"/>
+        </div>
+   <br>
+   <div style="text-align: initial;margin-left: 13%;">
+    <label>Password</label>
+    <br><br>
+    <input #passwords type="password" placeholder="Password *"/>
+    </div>
+   
+   <br>
+    <br>
+    <div style="text-align: initial;margin-left: 18%;">
+    <button style="cursor: pointer;font-size: 17px; width: 270px;align-items: initial; height: 44px; background-color: rgb(245, 98, 35);color: white; border: 0;"  (click)="onSignup(emails.value,passwords.value)">Register</button>
+    </div>
+
+    <h4>Already Have a account ? <span style="cursor: pointer;" (click)="goToPage('Login')">Sign In!</span></h4>
+    </div>
+    
+</div>
+
+  </div>
+</div>
+  <router-outlet></router-outlet>
